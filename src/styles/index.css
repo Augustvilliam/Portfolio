@@ -3,21 +3,95 @@
     padding:0;
     box-sizing:border-box;
 }
+/*#region RESET*/
+p, h1, h2, h3, h4, h5, h6, span{
+    font-family: 'Elms Sans', sans-serif;
+    font-weight: 400;
+}
+
+button{
+    font-family: 'Elms Sans', sans-serif;
+    font-weight: 400;
+    cursor:pointer;
+    border:none;
+    background:transparent;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/*#endregion RESET*/
+/*#region LAYOUT*/
 
 .page-layout {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100svh;
-    max-width: 80svw;
 
     margin: 0 auto;
+}
+/* footer inside page-layout (kept as a regular selector for valid CSS) */
+.page-layout footer{
+    align-self: center;
+    justify-self: center;
+    padding:2rem;
+}
 
-    footer{
-        align-self: center;
-        justify-self: center;
-        padding:2rem;
+/* Responsive breakpoints */
+/* Ultrawide: 1600px and up */
+@media (min-width: 1600px) {
+    .page-layout{
+        max-width: 1600px;
+        grid-template-rows: auto 1fr auto;
     }
 }
+
+/* Desktop: 1200px - 1599px */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .page-layout{
+        max-width: 80svw;
+    }
+}
+
+/* Laptop: 992px - 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .page-layout{
+        padding: 0 1rem;
+        max-width: 80svw;
+    }
+}
+
+/* Tablet landscape: 768px - 991px (horizontal) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .page-layout{
+        padding: 0 1rem;
+        max-width: 90svw;
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+/* Tablet portrait: 600px - 767px (upright) */
+@media (min-width: 600px) and (max-width: 767px) {
+    .page-layout{
+        padding: 0 0.75rem;
+        max-width: 640px;
+    }
+}
+
+/* Phone: up to 599px */
+@media (max-width: 599px) {
+    .page-layout{
+        padding: 0 0.5rem;
+        max-width: 100%;
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+/*#endregion LAYOUT*/
+/*#region LAYOUT-COMPONENTS*/
+
 
 header{
     display: grid;
@@ -26,3 +100,21 @@ header{
     align-items: center;
     justify-content: space-between;
 }
+
+footer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+
+.footer-links{
+    display:flex;
+    gap:1rem;
+    justify-content: space-between;
+    a{
+        border-bottom: 1px solid blue;
+    }
+    
+}
+/*#endregion LAYOUT-COMPONENTS*/
