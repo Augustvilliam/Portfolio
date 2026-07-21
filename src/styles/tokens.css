@@ -1,0 +1,206 @@
+:root{
+  --background: #f7f5ef;
+  --foreground: #1f2937;
+
+  --card: #fbfaf6;
+  --card-foreground: #1f2937;
+
+  --popover: rgba(251, 250, 246, 0.92);
+  --popover-foreground: #1f2937;
+
+  --primary: #2f8f5b;
+  --primary-hover: #26764c;
+  --primary-foreground: #ffffff;
+
+  --secondary: #ebe7dd;
+  --secondary-foreground: #1f2937;
+
+  --muted: #f0ede6;
+  --muted-foreground: #6b7280;
+
+  --accent: #2f8f5b;
+  --accent-foreground: #ffffff;
+
+  --destructive: #d43a2f;
+  --destructive-foreground: #ffffff;
+
+  --success: #2f8f5b;
+  --success-foreground: #ffffff;
+
+  --border: #d7d2c7;
+  --input: #e3ded3;
+  --ring: #2f8f5b;
+
+  --chart-1: #2f8f5b;
+  --chart-2: #2b7a54;
+  --chart-3: #256a4a;
+  --chart-4: #1f5a40;
+  --chart-5: #1a4a35;
+
+  --sidebar: #f1eee6;
+  --sidebar-foreground: #1f2937;
+  --sidebar-primary: #2f8f5b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e7e2d7;
+  --sidebar-accent-foreground: #1f2937;
+  --sidebar-border: #d7d2c7;
+  --sidebar-ring: #2f8f5b;
+
+  --font-sans: Inter, sans-serif;
+  --font-serif: Merriweather, serif;
+  --font-mono: JetBrains Mono, monospace;
+  --font-primary: 'Zalando Sans SemiExpanded', Courier, monospace;
+  --font-secondary: 'Electrolize', Courier, monospace;
+  --font-comp: sans-serif;
+
+  --radius: 4px;
+  --radius2: 0.2rem;
+  --radius4: 0.4rem;
+  --radius6: 0.6rem;
+  --radius8: 0.8rem;
+  --radius100: 100%;
+
+  --shadow-2xs: 0px 2px 6px -1px rgba(17, 24, 39, 0.06);
+  --shadow-xs: 0px 3px 8px -1px rgba(17, 24, 39, 0.08);
+  --shadow-sm: 0px 4px 10px -2px rgba(17, 24, 39, 0.10), 0px 1px 2px -2px rgba(17, 24, 39, 0.10);
+  --shadow: 0px 6px 14px -3px rgba(17, 24, 39, 0.12), 0px 2px 4px -2px rgba(17, 24, 39, 0.10);
+  --shadow-md: 0px 8px 18px -4px rgba(17, 24, 39, 0.14), 0px 4px 8px -4px rgba(17, 24, 39, 0.12);
+  --shadow-lg: 0px 12px 24px -6px rgba(17, 24, 39, 0.16), 0px 6px 12px -6px rgba(17, 24, 39, 0.14);
+  --shadow-xl: 0px 18px 36px -8px rgba(17, 24, 39, 0.18), 0px 10px 20px -10px rgba(17, 24, 39, 0.16);
+  --shadow-2xl: 0px 24px 48px -10px rgba(17, 24, 39, 0.22);
+
+  --gradient-primary: linear-gradient(135deg, #2f8f5b, #1a4a35);
+  --gradient-accent: linear-gradient(135deg, #e7e2d7, #f0ede6);
+  --gradient-hero: linear-gradient(135deg, #fbfaf6, #ebe7dd);
+
+  --gradient-1: linear-gradient(135deg, rgba(47, 143, 91, 0.10), rgba(0, 0, 0, 0.0));
+  --gradient-1-hover: linear-gradient(135deg, rgba(47, 143, 91, 0.16), rgba(0, 0, 0, 0.03));
+  --gradient-2: linear-gradient(180deg, #fbfaf6 0%, #f1eee6 100%);
+  --gradient-3: linear-gradient(160deg, #f0ede6 0%, #d7d2c7 100%);
+  --gradient-4: linear-gradient(135deg, rgba(17, 24, 39, 0.05), rgba(17, 24, 39, 0.02));
+
+  --mustardonthebeathoe: #caa100;
+}
+
+:root[data-theme="dark"]{
+  --background: #1f2420;          
+  --foreground: #e3e6df;          
+
+  --card: #262c27;                
+  --card-foreground: #e3e6df;
+
+  --popover: rgba(38, 44, 39, 0.94);
+  --popover-foreground: #e3e6df;
+
+  --primary: #6f8f6b;             
+  --primary-hover: #5f7f5b;
+  --primary-foreground: #0e140f;
+
+  --secondary: #2e3530;
+  --secondary-foreground: #e3e6df;
+
+  --muted: #2a302c;
+  --muted-foreground: #9aa49b;
+
+  --accent: #8aa17a;              
+  --accent-foreground: #0e140f;
+
+  --destructive: #9e3f2f;         
+  --destructive-foreground: #fff;
+
+  --success: #5f7f5b;
+  --success-foreground: #0e140f;
+
+  --border: #3a423d;              
+  --input: #2f3631;
+  --ring: #8aa17a;
+
+  --chart-1: #6f8f6b;
+  --chart-2: #8aa17a;
+  --chart-3: #a89f6a;             
+  --chart-4: #7a6a4f;           
+  --chart-5: #4a524b;           
+
+  --sidebar: #1b201c;
+  --sidebar-foreground: #e3e6df;
+  --sidebar-primary: #6f8f6b;
+  --sidebar-primary-foreground: #0e140f;
+  --sidebar-accent: #2e3530;
+  --sidebar-accent-foreground: #e3e6df;
+  --sidebar-border: #3a423d;
+  --sidebar-ring: #8aa17a;
+
+  --font-sans: Inter, sans-serif;
+  --font-serif: Merriweather, serif;
+  --font-mono: JetBrains Mono, monospace;
+
+  --radius: 4px;
+  --radius2: .2rem;
+  --radius4: .4rem;
+  --radius6: .6rem;
+  --radius8: .8rem;
+  --radius100: 100%;
+
+  --shadow-2xs: 0px 2px 6px -1px rgba(0, 0, 0, 0.35);
+  --shadow-xs: 0px 3px 8px -1px rgba(0, 0, 0, 0.38);
+  --shadow-sm: 0px 4px 10px -2px rgba(0, 0, 0, 0.40);
+  --shadow: 0px 6px 14px -3px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0px 8px 18px -4px rgba(0, 0, 0, 0.50);
+  --shadow-lg: 0px 12px 24px -6px rgba(0, 0, 0, 0.55);
+  --shadow-xl: 0px 18px 36px -8px rgba(0, 0, 0, 0.60);
+  --shadow-2xl: 0px 24px 48px -10px rgba(0, 0, 0, 0.65);
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    #8aa17a,
+    #4f6b4a
+  );
+
+  --gradient-accent: linear-gradient(
+    135deg,
+    #2e3530,
+    #1f2420
+  );
+
+  --gradient-hero: radial-gradient(
+    circle at top,
+    #2a302c 0%,
+    #1f2420 70%
+  );
+
+  --gradient-1: linear-gradient(
+    135deg,
+    rgba(138, 161, 122, 0.18),
+    rgba(0, 0, 0, 0.0)
+  );
+
+  --gradient-1-hover: linear-gradient(
+    135deg,
+    rgba(138, 161, 122, 0.26),
+    rgba(0, 0, 0, 0.05)
+  );
+
+  --gradient-2: linear-gradient(
+    180deg,
+    #262c27 0%,
+    #1f2420 100%
+  );
+
+  --gradient-3: linear-gradient(
+    160deg,
+    #2e3530 0%,
+    #1b201c 100%
+  );
+
+  --gradient-4: linear-gradient(
+    135deg,
+    rgba(111, 143, 107, 0.22),
+    rgba(111, 143, 107, 0.06)
+  );
+
+  --mustardonthebeathoe: #caa100;
+
+  --font-primary: 'Zalando Sans SemiExpanded', Courier, monospace;
+  --font-secondary: 'Electrolize', Courier, monospace;
+  --font-comp: sans-serif;
+}
