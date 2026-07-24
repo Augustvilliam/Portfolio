@@ -28,6 +28,9 @@
   --success-foreground: #ffffff;
 
   --border: #d7d2c7;
+  --border-strong: #b8b1a4;
+  --border-accent: #4aa06c;
+
   --input: #e3ded3;
   --ring: #2f8f5b;
 
@@ -49,7 +52,7 @@
   --font-sans: Inter, sans-serif;
   --font-serif: Merriweather, serif;
   --font-mono: JetBrains Mono, monospace;
-  --font-primary: 'Zalando Sans SemiExpanded', Courier, monospace;
+  --font-primary: 'Elms sans', Courier, monospace;
   --font-secondary: 'Electrolize', Courier, monospace;
   --font-comp: sans-serif;
 
@@ -111,7 +114,9 @@
   --success: #5f7f5b;
   --success-foreground: #0e140f;
 
-  --border: #3a423d;              
+  --border: #3a423d;       
+  --border-strong: #59635c;
+  --border-accent: #8aa17a;     
   --input: #2f3631;
   --ring: #8aa17a;
 
