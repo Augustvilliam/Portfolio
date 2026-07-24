@@ -159,6 +159,11 @@ footer{
     gap:1rem;
     justify-content: space-between;
     a{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap:.3rem;
         border-bottom: 1px solid var(--border-accent);
     }
     
