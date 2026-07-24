@@ -166,6 +166,10 @@ footer{
         gap:.3rem;
         border-bottom: 1px solid var(--border-accent);
     }
+    a:hover{
+        transition: .2s ease-in;
+        color:var(--accent);
+    }
     
 }
 /*#endregion LAYOUT-COMPONENTS*/
@@ -198,6 +202,14 @@ footer{
     display: flex;
     flex-direction: row;
     gap:2rem;
+}
+.header-link{
+    padding-bottom:1rem;
+}
+.header-link:hover{
+    transition: .5s ease-in-out;
+    border-bottom: var(--border-accent) 2px solid;
+    color: var(--border-accent);
 }
 .darkmode{
     align-self: end;
