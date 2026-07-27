@@ -75,6 +75,14 @@
   --gradient-primary: linear-gradient(135deg, #2f8f5b, #1a4a35);
   --gradient-accent: linear-gradient(135deg, #e7e2d7, #f0ede6);
   --gradient-hero: linear-gradient(135deg, #fbfaf6, #ebe7dd);
+  --gradient-link:linear-gradient(
+    135deg,
+    #1a4a35,
+    #3fbd79,
+    #9fd356,
+    #2f8f5b,
+    #1a4a35
+);
 
   --gradient-1: linear-gradient(135deg, rgba(47, 143, 91, 0.10), rgba(0, 0, 0, 0.0));
   --gradient-1-hover: linear-gradient(135deg, rgba(47, 143, 91, 0.16), rgba(0, 0, 0, 0.03));
@@ -83,6 +91,22 @@
   --gradient-4: linear-gradient(135deg, rgba(17, 24, 39, 0.05), rgba(17, 24, 39, 0.02));
 
   --mustardonthebeathoe: #caa100;
+
+  /* Font size scale */
+  --font-xs: 0.75rem;   /* 12px */
+  --font-s: 0.875rem;   /* 14px */
+  --font-m: 1rem;       /* 16px (base) */
+  --font-l: 1.25rem;    /* 20px */
+  --font-xl: 1.5rem;    /* 24px */
+
+  /* Optional typography tokens */
+  --leading-xs: 1;      /* line-height */
+  --leading-s: 1.25;
+  --leading-m: 1.5;
+  --leading-l: 1.6;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 }
 
 :root[data-theme="dark"]{
@@ -201,6 +225,15 @@
     135deg,
     rgba(111, 143, 107, 0.22),
     rgba(111, 143, 107, 0.06)
+  );
+
+  --gradient-link: linear-gradient(
+    135deg,
+    #4f6b4a,
+    #6fa366,
+    #a8b850,
+    #6f8f6b,
+    #4f6b4a
   );
 
   --mustardonthebeathoe: #caa100;

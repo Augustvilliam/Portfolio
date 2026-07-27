@@ -3,3 +3,46 @@
 a.active{
     color: var(--accent);
 }
+
+.home-header > h1 {
+    font-size: var(--font-xl);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--border-strong);
+}
+
+.home-intro{
+    font-size: var(--font-m);
+    line-height: var(--leading-l);
+}
+.home-intro > a {
+    color:var(--accent);
+}
+
+
+.home-cta > a > svg {
+    color:var(--accent);
+}
+
+.home-cta > a svg {
+    transition: transform 200ms ease;
+}
+
+.home-cta > a:hover > svg {
+    transform: translateX(0.3rem);
+}
+
+
+@keyframes cta-gradient-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
