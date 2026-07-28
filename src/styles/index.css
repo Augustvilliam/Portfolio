@@ -344,4 +344,24 @@ section{
         height: 100%;
     }
 }
+
+.home-contact{
+    padding:2rem;
+    margin: 0 auto;
+}
+
+.home-contact > .section-head{
+    display: flex;
+    gap:2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-overview-grid{
+    display: grid;
+    grid-template-columns: repeat(min 420px, 1fr);
+    justify-content: center;
+    align-items: center;
+}
 /*#endregion Homepage*/ 

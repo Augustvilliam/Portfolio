@@ -113,16 +113,12 @@ export default function HomePage() {
       </section>
 
       <section className="home-contact">
+        
         <div className="section-head">
           <p>Kontakt</p>
           <h2>Är du en rekryterare som letar efter en hungrig junior? eller kanske bara någon som vill snacka över en kopp kaffe?</h2>
           <p>Jag är öppen för juniora utvecklarroller, samarbeten och samtal om system som borde fungera bättre än vad de gör idag!</p>
-        </div>
-
-        <div className="">
-          <ContactLinks />
-        </div>
-        
+        </div>        
       </section>
 
 
