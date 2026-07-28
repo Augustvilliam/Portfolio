@@ -48,6 +48,27 @@ export default function HomePage() {
         </div>
 
       </section>
+
+      <section className="home-overview">
+        <div className="section-head">
+          <p>Överblick</p>
+          <h2>Kod, erfarenhet och en rimlig mängd envishet</h2>
+        </div>
+
+        <div className="home-overview-grid">
+          <article>
+            <span>01</span>
+            <h3>Utveckling</h3>
+
+            <p>Jag arbetar främst med C#, .NET, Entity Framwork Core, React och TypeScript</p>
+
+            <NavLink>
+              
+            </NavLink>
+          </article>
+        </div>
+
+      </section>
     </main>
   )
 }
