@@ -305,3 +305,43 @@ footer{
 }
 
 /*#endregion Components*/
+
+/*#region Homepage*/ 
+section{
+    border-bottom: 3px solid var(--border-accent);
+    padding: 2rem 0;
+}
+
+.home-featured-hero{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    gap:1rem;
+
+    .home-header{
+        grid-row: 1;
+    }
+    .home-featured-content{
+        grid-row:2;
+        grid-column: 2;
+        padding-left: 2rem;
+    }
+    .featured-proj-img{
+        grid-row:2;
+        grid-column: 1;
+    }
+
+
+}
+
+.featured-proj-img{
+    border:1px solid var(--border-strong);
+    border-radius: var(--radius4);
+    overflow: hidden;
+    width: 400px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+/*#endregion Homepage*/ 

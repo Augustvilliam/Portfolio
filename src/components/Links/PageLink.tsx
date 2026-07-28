@@ -16,9 +16,12 @@ export default function PageLink ({
     className,
 }: PageLinkProps) {
     return(
+        <div className="home-cta">
+
         <NavLink to={to} className={className} >
             <span>{text}</span>
             {icon}
         </NavLink>
+        </div>
     )
 }

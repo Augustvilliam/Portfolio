@@ -4,7 +4,7 @@ a.active{
     color: var(--accent);
 }
 
-.home-header > h1 {
+.home-header > h1, h2 {
     font-size: var(--font-xl);
     text-decoration: underline;
     text-decoration-thickness: 2px;

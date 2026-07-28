@@ -45,7 +45,7 @@ export default function HomePage() {
       </section>
 
       <section className="home-overview">
-        <div className="section-head">
+        <div className="home-header">
           <p>Överblick</p>
           <h2>Kod, erfarenhet och en rimlig mängd envishet</h2>
         </div>
@@ -80,25 +80,32 @@ export default function HomePage() {
       </section>
 
       <section className="home-featured">
-        <div className="home-featured-content">
-          <p>Utvalda projekt</p>
-          <h2>Demophoon</h2>
+        <div className="home-featured-hero">
 
-          <p>
-            En fullstackapplikation för att rapportera och synliggöra ghosting inom rektrytering. Projektet byggs med React, TypeScript, ASP.NET och Entity Framework Core
-          </p>
+          <div className="home-header">
+            <p>Utvalda projekt</p>
+            <h2>Demophoon</h2>
+          </div>
 
-          <ul className="techonlogy-list" aria-label="Tekniker">
-            <li>React</li>
-            <li>TypeScript</li>
-            <li>ASP.NET</li>
-            <li>SQL Server</li>
-          </ul>
+          <div className="home-featured-content">
 
-          <PageLink to="/portfolio" text="Läs mer om projektet" />
+            <p>
+              En fullstackapplikation för att rapportera och synliggöra ghosting inom rektrytering. Projektet byggs med React, TypeScript, ASP.NET och Entity Framework Core
+            </p>
+
+            <ul className="techonlogy-list" aria-label="Tekniker">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>ASP.NET</li>
+              <li>SQL Server</li>
+            </ul>
+
+            <PageLink to="/portfolio" text="Läs mer om projektet" />
+          
+          </div>
 
           <div className="featured-proj-img">
-            <img src="/demo.webp" alt="Förhandsvisning för Demophoon projektet" />
+            <img src="/images/demo.webp" alt="Förhandsvisning för Demophoon projektet" />
           </div>
 
         </div>
