@@ -1,5 +1,5 @@
-import { ArrowLeft } from "lucide-react";
-import { NavLink } from "react-router";
+import PageLink from "../components/Links/PageLink";
+import ContactLinks from "../components/Links/ContactLinks";
 
 export default function HomePage() {
   return (
@@ -26,15 +26,10 @@ export default function HomePage() {
 
           <div className="home-cta">
 
-            <NavLink to="/portfolio">
-              Se mina projekt här
-              <ArrowLeft aria-hidden="true" />
-            </NavLink>
+            <PageLink to="/portfolio" text="Se mina projekt här" />
 
-            <NavLink to="/about" >
-              Mer om mig här
-              <ArrowLeft  aria-hidden="true"/>
-            </NavLink>
+            <PageLink to="/about" text="Mer om mig här" />
+
           </div>
 
           <div className="home-img-portrait">
@@ -62,13 +57,68 @@ export default function HomePage() {
 
             <p>Jag arbetar främst med C#, .NET, Entity Framwork Core, React och TypeScript</p>
 
-            <NavLink>
-              
-            </NavLink>
+            <PageLink to="/about" text="Mina kompetenser" />
           </article>
+
+          <article>
+            <span>02</span>
+            <h3>Projekt</h3>
+            <p>Vad håller jag på med efter examen då? Jo jag har hållt mig sysselsatt med att blandannat bygga ett rapportsystem i React och .NET samt ett microservicebaserat restaurangsystem i Blazor!</p>
+            <PageLink to="/portfolio" text="Utforska projekten" />
+          </article>
+
+          <article>
+            <h3>Bakgrund</h3>
+            <p>Nästan tio år av erfarenhet från restaurangbranschen har gett mig en gidigen grund i sammarbete, problemlösning, ansvar, stressiga perioder och kundkontakt</p>
+
+            <PageLink to="/journy" text="Följ min resa" />
+          </article>
+
+          
         </div>
 
       </section>
+
+      <section className="home-featured">
+        <div className="home-featured-content">
+          <p>Utvalda projekt</p>
+          <h2>Demophoon</h2>
+
+          <p>
+            En fullstackapplikation för att rapportera och synliggöra ghosting inom rektrytering. Projektet byggs med React, TypeScript, ASP.NET och Entity Framework Core
+          </p>
+
+          <ul className="techonlogy-list" aria-label="Tekniker">
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>ASP.NET</li>
+            <li>SQL Server</li>
+          </ul>
+
+          <PageLink to="/portfolio" text="Läs mer om projektet" />
+
+          <div className="featured-proj-img">
+            <img src="/demo.webp" alt="Förhandsvisning för Demophoon projektet" />
+          </div>
+
+        </div>
+
+      </section>
+
+      <section className="home-contact">
+        <div className="section-head">
+          <p>Kontakt</p>
+          <h2>Är du en rekryterare som letar efter en hungrig junior? eller kanske bara någon som vill snacka över en kopp kaffe?</h2>
+          <p>Jag är öppen för juniora utvecklarroller, samarbeten och samtal om system som borde fungera bättre än vad de gör idag!</p>
+        </div>
+
+        <div className="">
+          <ContactLinks />
+        </div>
+        
+      </section>
+
+
     </main>
   )
 }

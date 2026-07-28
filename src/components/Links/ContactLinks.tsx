@@ -1,7 +1,7 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa6"
 import {PiMicrosoftOutlookLogo} from "react-icons/pi";
 
-export default function Links () {
+export default function ContactLinks () {
     return(
         <>
             <a href="https://www.linkedin.com/in/villiam-fagrelius-755716325/" target="_blank" rel="noopener noreferrer">

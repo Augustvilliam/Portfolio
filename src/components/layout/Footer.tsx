@@ -1,4 +1,4 @@
-import Links from "../Links/Links";
+import ContactLinks from "../Links/ContactLinks";
 
 export default function Footer() {
 
@@ -8,7 +8,7 @@ export default function Footer() {
             <p>© Arbetslös nyexad pajas.</p>
 
             <div className="footer-links">
-                <Links />
+                <ContactLinks />
             </div>
         </footer>
     )
