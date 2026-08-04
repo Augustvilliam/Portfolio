@@ -52,26 +52,26 @@ export default function HomePage() {
 
         <div className="home-overview-grid">
           <article>
-            <span>01</span>
+
             <h3>Utveckling</h3>
-
-            <p>Jag arbetar främst med C#, .NET, Entity Framwork Core, React och TypeScript</p>
-
+            <p>Jag arbetar främst med C#, .NET, Entity Framwork Core, React och TypeScript, men är alltid redo för en utmaning!</p>
             <PageLink to="/about" text="Mina kompetenser" />
+
           </article>
 
           <article>
-            <span>02</span>
             <h3>Projekt</h3>
             <p>Vad håller jag på med efter examen då? Jo jag har hållt mig sysselsatt med att blandannat bygga ett rapportsystem i React och .NET samt ett microservicebaserat restaurangsystem i Blazor!</p>
             <PageLink to="/portfolio" text="Utforska projekten" />
+
           </article>
 
           <article>
+
             <h3>Bakgrund</h3>
             <p>Nästan tio år av erfarenhet från restaurangbranschen har gett mig en gidigen grund i sammarbete, problemlösning, ansvar, stressiga perioder och kundkontakt</p>
-
             <PageLink to="/journy" text="Följ min resa" />
+
           </article>
 
           
@@ -109,7 +109,35 @@ export default function HomePage() {
           </div>
 
         </div>
+        <div className="home-featured-hero">
 
+          <div className="home-header">
+            <p>Utvalda projekt</p>
+            <h2>Demophoon</h2>
+          </div>
+
+          <div className="home-featured-content">
+
+            <p>
+              En fullstackapplikation för att rapportera och synliggöra ghosting inom rektrytering. Projektet byggs med React, TypeScript, ASP.NET och Entity Framework Core
+            </p>
+
+            <ul className="techonlogy-list" aria-label="Tekniker">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>ASP.NET</li>
+              <li>SQL Server</li>
+            </ul>
+
+            <PageLink to="/portfolio" text="Läs mer om projektet" />
+          
+          </div>
+
+          <div className="featured-proj-img">
+            <img src="/images/demo.webp" alt="Förhandsvisning för Demophoon projektet" />
+          </div>
+
+        </div>
       </section>
 
       <section className="home-contact">
