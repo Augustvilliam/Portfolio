@@ -80,10 +80,11 @@ export default function HomePage() {
       </section>
 
       <section className="home-featured">
-        <div className="home-featured-hero">
+
+        <p>Utvalda projekt</p>
+        <article className="home-featured-hero">
 
           <div className="home-header">
-            <p>Utvalda projekt</p>
             <h2>Demophoon</h2>
           </div>
 
@@ -108,12 +109,12 @@ export default function HomePage() {
             <img src="/images/demo.webp" alt="Förhandsvisning för Demophoon projektet" />
           </div>
 
-        </div>
-        <div className="home-featured-hero">
+        </article>
+        <article className="home-featured-hero">
 
           <div className="home-header">
             <p>Utvalda projekt</p>
-            <h2>Demophoon</h2>
+            <h2>Wilhelm burgers</h2>
           </div>
 
           <div className="home-featured-content">
@@ -134,10 +135,11 @@ export default function HomePage() {
           </div>
 
           <div className="featured-proj-img">
-            <img src="/images/demo.webp" alt="Förhandsvisning för Demophoon projektet" />
+            <img src="/images/burgers.png" alt="Förhandsvisning för Wilhelm burgers projektet" />
           </div>
 
-        </div>
+        </article>
+
       </section>
 
       <section className="home-contact">
