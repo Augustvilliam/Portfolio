@@ -198,6 +198,13 @@ footer{
 }
 /*#endregion LAYOUT-COMPONENTS*/
 /*#region Components*/
+.techonlogy-list{
+    display: flex;
+    flex-direction: column;
+    li{
+        padding: .2rem .5rem;
+    }
+}
 .header-logo{
     border-radius: 50%;
     height: 150px;

@@ -1,5 +1,6 @@
 import PageLink from "../components/Links/PageLink";
 import ContactLinks from "../components/Links/ContactLinks";
+import ProjectArticles from "../components/Articles/ProjectArticles";
 
 export default function HomePage() {
   return (
@@ -82,63 +83,8 @@ export default function HomePage() {
       <section className="home-featured">
 
         <p>Utvalda projekt</p>
-        <article className="home-featured-hero">
 
-          <div className="home-header">
-            <h2>Demophoon</h2>
-          </div>
-
-          <div className="home-featured-content">
-
-            <p>
-              En fullstackapplikation för att rapportera och synliggöra ghosting inom rektrytering. Projektet byggs med React, TypeScript, ASP.NET och Entity Framework Core
-            </p>
-
-            <ul className="techonlogy-list" aria-label="Tekniker">
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>ASP.NET</li>
-              <li>SQL Server</li>
-            </ul>
-
-            <PageLink to="/portfolio" text="Läs mer om projektet" />
-          
-          </div>
-
-          <div className="featured-proj-img">
-            <img src="/images/demo.webp" alt="Förhandsvisning för Demophoon projektet" />
-          </div>
-
-        </article>
-        <article className="home-featured-hero">
-
-          <div className="home-header">
-            <p>Utvalda projekt</p>
-            <h2>Wilhelm burgers</h2>
-          </div>
-
-          <div className="home-featured-content">
-
-            <p>
-              En fullstackapplikation för att rapportera och synliggöra ghosting inom rektrytering. Projektet byggs med React, TypeScript, ASP.NET och Entity Framework Core
-            </p>
-
-            <ul className="techonlogy-list" aria-label="Tekniker">
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>ASP.NET</li>
-              <li>SQL Server</li>
-            </ul>
-
-            <PageLink to="/portfolio" text="Läs mer om projektet" />
-          
-          </div>
-
-          <div className="featured-proj-img">
-            <img src="/images/burgers.png" alt="Förhandsvisning för Wilhelm burgers projektet" />
-          </div>
-
-        </article>
+        <ProjectArticles />
 
       </section>
 
