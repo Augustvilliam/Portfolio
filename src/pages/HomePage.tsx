@@ -92,7 +92,7 @@ export default function HomePage() {
         
         <div className="section-head">
           <p>Kontakt</p>
-          <h2>Är du en rekryterare som letar efter en hungrig junior? eller kanske bara någon som vill snacka över en kopp kaffe?</h2>
+          <h2>Är du en rekryterare som letar efter en hungrig junior? Eller du kanske bara är någon som vill snacka över en kopp kaffe?</h2>
           <p>Jag är öppen för juniora utvecklarroller, samarbeten och samtal om system som borde fungera bättre än vad de gör idag!</p>
         </div>        
       </section>
