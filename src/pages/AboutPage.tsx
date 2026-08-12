@@ -2,54 +2,128 @@ import PageLink from "../components/Links/PageLink";
 
 export default function AboutPage() {
     return (
-        <section>
-            <h1>WOW! Tjena, hej!</h1>
-            <p>kul att du vill veta mer om mig, men om du gillar ett tradionellt cv så trycker du på knappen nedanför</p>
-            <a href="/cv.pdf" download>Ladda ner CV</a>
+          <main className="about-page">
 
-            <section className="about-content"> 
+            <header className="about-hero">
+                <h1>WOW! Tjena, hej!</h1>
+
                 <p>
+                    Kul att du vill veta mer om mig! Föredrar du däremot ett
+                    traditionellt CV så hittar du det här nedanför.
+                </p>
+
+                <a
+                    className="about-cv-link"
+                    href="/cv.pdf"
+                    download
+                >
+                    Ladda ner CV
+                </a>
+            </header>
+
+
+            <article className="about-content">
+
+                <p className="about-intro">
                     Hejsan hoppsan lillebror!
                 </p>
 
 
-                <section className="about-section">
-                    <h2>Vem är jag då?</h2>
+                <section className="about-section about-me">
+                    <div className="about-section-content">
 
-                    <p>Jag heter villiam och jag är en nyexaminerad webbutvecklare med inriktning på ASP.NET. Jag bor i den lilla staden Falkenberg tillsammans med min sambo och våra två katter.</p>
+                        <h2>Vem är jag då?</h2>
 
-                    <div>
-                        <img alt="Kattskatt" src="cat-tax.jpg" className=""></img>
+                        <p>
+                            Jag heter Villiam och är en nyexaminerad webbutvecklare
+                            med inriktning mot ASP.NET. Jag bor i den lilla staden
+                            Falkenberg tillsammans med min sambo och våra två katter.
+                        </p>
+
+                        <p>
+                            Innan jag bytte restaurangbranschen mot kodknackande hade
+                            jag nästan tio år på Max Burgers bakom mig. Där började jag
+                            som medarbetare och jobbade mig hela vägen upp till
+                            biträdande restaurangchef 2020.
+                        </p>
+
+                        <p>
+                            Numera spenderar jag istället orimligt mycket tid på C# och
+                            React, samtidigt som jag funderar över varför något fungerade
+                            igår men inte idag, och hur en snart 30-åring fortfarande
+                            lyckas stava fel på ungefär vart tredje ord.
+                        </p>
+
                     </div>
 
-                    <p>Innan jag bytte restaurangbranschen till kod-knagglare hade jag nästan 10 år på Max Burgers. Där började jag som en simpel medarbetare, och jobbade mig upp hela vägen till biträdande restaurangchef 2020. Numera spenaderar jag istället massa tid på C# och React och funderar själv på hur saker och ting fungerade ena dagen men inte nästa, och hur en snart 30-åring inte kan stava ordentligt</p>
-                    
-                    <p>
-                        om du vill veta mer om mitt yrkesliv så kan ni klicka nedaför, eller i header, vad som går bra
-                    </p>
+                    <figure className="about-cat-tax">
+                        <img
+                            src="/cat-tax.jpg"
+                            alt="Mina två katter"
+                        />
 
-                    <PageLink to="/journy" text="Se mitt yrkesliv här" />
+                        <figcaption>
+                            Obligatorisk kattskatt.
+                        </figcaption>
+                    </figure>
 
+                    <div className="about-journey-link">
+                        <p>
+                            Vill du veta mer om mitt yrkesliv och hur jag hamnade
+                            här så finns hela historien på sidan om min resa.
+                        </p>
+
+                        <PageLink
+                            to="/journey"
+                            text="Se mitt yrkesliv här"
+                        />
+                    </div>
                 </section>
 
-                <section>
-                    <h2> NäR dU iNtE sKriVeR Kod dÅ?</h2>
+
+                <section className="about-section about-interests">
+                    <h2>NäR dU iNtE sKriVeR Kod dÅ?</h2>
 
                     <p>
-                        När jag inte sittar mig tom i huvudet så gör jag ungefär 10000 andra saker, bland annat att spelar jag brutalt nedstämd gitarr, spelar datorspel, bakar allt som har chocklad i sig, umgås med vänner och familj, åker på på konserter med mamma och förtränger att jag snart fyller 30. 
-                        <br/><br/> och ja, jag äter fortfarnade Max, och ja, burgare är antagligen min favoritmax.
+                        När jag inte stirrar mig tom i huvudet framför en editor gör
+                        jag ungefär 10 000 andra saker. Bland annat spelar jag brutalt
+                        nedstämd gitarr, spelar datorspel, bakar allt som innehåller
+                        choklad, umgås med vänner och familj, åker på konserter med
+                        mamma och förtränger att jag snart fyller 30.
                     </p>
 
-                    <p></p>
+                    <p>
+                        Och ja, jag äter fortfarande på Max. Och ja, burgare är
+                        antagligen fortfarande min favoritmat.
+                    </p>
                 </section>
 
-            </section>
 
-            <div>
-                <p>Vissa av er som tagit er hit kanske lyfter på ögonbrynen och tänker "Vafan är detta för något?" eller  "Detta känns inte så seriöst?"</p>
-                <p>Men det är så jag gillar det. Jag gillar när det är högt i tak, när man får vara sig själv och när man gör en liten hobby portfölj så kanske man inte behöver vara så fyrkantig. Jag skulle säga att jag är en rolig, snäll och kreativ person, och det tror jag de flesta i min närhet eller som har jobbat med mig kan intyga, och detta är ett av sätten man kan visa det</p>
-            </div>
+                <aside className="about-note">
+                    <h2>Men är det här verkligen seriöst?</h2>
 
-        </section>
+                    <p>
+                        Vissa av er som tagit er hit kanske lyfter på ögonbrynen och
+                        tänker: "Vad fan är detta för något?" eller "Det här känns
+                        inte särskilt seriöst?"
+                    </p>
+
+                    <p>
+                        Men det är lite så jag vill ha det. Jag gillar när det är högt
+                        i tak, när man får vara sig själv och tycker att en personlig
+                        portfolio faktiskt får vara personlig.
+                    </p>
+
+                    <p>
+                        Jag skulle beskriva mig själv som en rolig, snäll och kreativ
+                        person, och det tror jag att de flesta som känner eller har
+                        arbetat med mig skulle hålla med om. Det här är helt enkelt
+                        ett av sätten jag kan visa den sidan också.
+                    </p>
+                </aside>
+
+            </article>
+
+        </main>
     )
 }

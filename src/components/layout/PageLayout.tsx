@@ -7,9 +7,7 @@ export default function PageLayout() {
         <div className="page-layout">
             <Header />
 
-            <main>
-                <Outlet />
-            </main>
+            <Outlet />
 
             <Footer />
         </div>
