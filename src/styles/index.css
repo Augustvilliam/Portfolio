@@ -317,7 +317,7 @@ footer{
 /*#endregion Components*/
 
 /*#region Homepage*/ 
-section{
+.home-section{
     border-bottom: 3px solid var(--border-accent);
     padding: 2rem 0;
 }

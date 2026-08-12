@@ -1,12 +1,11 @@
 import PageLink from "../components/Links/PageLink";
-import ContactLinks from "../components/Links/ContactLinks";
 import ProjectArticles from "../components/Articles/ProjectArticles";
 
 export default function HomePage() {
   return (
     <main className="home-page">
 
-      <section className="home-hero">
+      <section className="home-hero home-section">
 
         <div className="home-content">
 
@@ -45,7 +44,7 @@ export default function HomePage() {
 
       </section>
 
-      <section className="home-overview">
+      <section className="home-overview home-section">
         <div className="home-header">
           <p>Överblick</p>
           <h2>Kod, erfarenhet och en rimlig mängd envishet</h2>
@@ -80,7 +79,7 @@ export default function HomePage() {
 
       </section>
 
-      <section className="home-featured">
+      <section className="home-featured home-section">
 
         <p>Utvalda projekt</p>
 
@@ -88,7 +87,7 @@ export default function HomePage() {
 
       </section>
 
-      <section className="home-contact">
+      <section className="home-contact home-section">
         
         <div className="section-head">
           <p>Kontakt</p>
