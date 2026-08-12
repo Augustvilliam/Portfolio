@@ -56,16 +56,21 @@ export default function AboutPage() {
 
                     </div>
 
-                    <figure className="about-cat-tax">
-                        <img
-                            src="/cat-tax.jpg"
-                            alt="Mina två katter"
-                        />
+                    <div className="about-section-images">
+                        <figure className="about-cat-tax">
+                            <img
+                                src="images/cat-tax.jpg"
+                                alt="Mina två katter"
+                            />
+                        </figure>
 
-                        <figcaption>
-                            Obligatorisk kattskatt.
-                        </figcaption>
-                    </figure>
+                        <figure className="about-cat-tax">
+                            <img
+                                src="images/cat-tax2.jpg"
+                                alt="Mina två katter"
+                            />
+                        </figure>
+                    </div>
 
                     <div className="about-journey-link">
                         <p>
