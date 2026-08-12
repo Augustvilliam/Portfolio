@@ -1,0 +1,8 @@
+               <p>
+                    Hejsan hoppsan lillebror!
+                </p>
+                <p>Jag heter villiam och jag är en nyexaminerad webbutvecklare med inriktning på ASP.NET. Jag bor i den lilla staden Falkenberg tillsammans med min sambo och våra två katter.</p>
+
+                <p>Innan jag bytte restaurngbranchgen mot kod så hade jag nästan tio år under bältet på Max Burgers. Där började jag 2016 som en naiv student och tänkte "Det är bara ett sommarjobb". Men som ni märker så varade det en lite stund till.</p>
+
+                <p>Under min tid på Max så började jag som en simpel medarbetare, jag skötte utlämning av mat, beställandet av mat, görandet av mat och städandet av mat. Service kom tydligen rätt naturligt för mig, och det visade sig att jag var förbaskat bra på det. Samma sommar fick jag pris för årets Rookie, året fick jag pris för årets medarbetare, och året efter det (2018 om du hänger med i tidslinjen) så blev jag driftledare</p>
