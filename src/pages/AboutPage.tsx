@@ -92,7 +92,7 @@ export default function AboutPage() {
                     <p>
                         När jag inte stirrar mig tom i huvudet framför en editor gör
                         jag ungefär 10 000 andra saker. Bland annat spelar jag brutalt
-                        nedstämd gitarr, spelar datorspel, bakar allt som innehåller
+                        nedstämd gitarr, gymmar, spelar datorspel, bakar allt som innehåller
                         choklad, umgås med vänner och familj, åker på konserter med
                         mamma och förtränger att jag snart fyller 30.
                     </p>
@@ -104,7 +104,7 @@ export default function AboutPage() {
                 </section>
 
 
-                <aside className="about-note">
+                <section className="about-section about-note">
                     <h2>Men är det här verkligen seriöst?</h2>
 
                     <p>
@@ -114,7 +114,7 @@ export default function AboutPage() {
                     </p>
 
                     <p>
-                        Men det är lite så jag vill ha det. Jag gillar när det är högt
+                        Men det är lite så jag gillar att ha det. Jag gillar när det är högt
                         i tak, när man får vara sig själv och tycker att en personlig
                         portfolio faktiskt får vara personlig.
                     </p>
@@ -125,7 +125,7 @@ export default function AboutPage() {
                         arbetat med mig skulle hålla med om. Det här är helt enkelt
                         ett av sätten jag kan visa den sidan också.
                     </p>
-                </aside>
+                </section>
 
             </article>
 
