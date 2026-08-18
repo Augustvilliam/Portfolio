@@ -1,7 +1,9 @@
+import Construction from "../components/Construction";
+
 export default function PortfolioPage() {
     return (
         <div>
-            porfolio
+            <Construction />
         </div>
     )
 }

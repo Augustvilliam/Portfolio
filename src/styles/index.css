@@ -13,6 +13,15 @@ html {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 }
+.construction-page{
+    display:flex;
+    font-size:var(--font-xl);
+    font-weight:var(--font-weight-bold);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+}
 /*#region RESET*/
 p, h1, h2, h3, h4, h5, h6, span, a, button, li, ul, div{
     font-family: 'Elms Sans', sans-serif;

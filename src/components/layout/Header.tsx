@@ -1,6 +1,7 @@
 import { NavLink } from "react-router";
 import { useTheme } from "../../hooks/useTheme";
 import {Sun, Moon} from "lucide-react";
+import HeaderNav from "../Links/HeaderNav";
 
 export default function Header() {
 
@@ -14,54 +15,7 @@ export default function Header() {
                 <img src="/images/logo.webp" alt="Logo" />
             </NavLink>
 
-            <nav className="header-nav">
-
-                <ul className="header-links">
-
-                    <li className="header-link-item">
-
-                        <NavLink className="header-link" to="/" end>
-                            Hem
-                        </NavLink>
-
-                    </li>
-
-                    <li className="header-link-item">
-
-                        <NavLink className="header-link" to="/about">
-                            Om mig
-                        </NavLink>
-
-                    </li>
-
-                    <li className="header-link-item">
-
-                        <NavLink className="header-link" to="/portfolio">
-                            Portfolio
-                        </NavLink>
-
-                    </li>
-
-                    <li className="header-link-item">
-
-                        <NavLink className="header-link" to="/journy">
-                            Resa
-                        </NavLink>
-
-                    </li>
-
-                    <li className="header-link-item">
-
-                        <NavLink className="header-link" to="/friends">
-                            Mina Vänner
-                        </NavLink>
-
-                    </li>
-
-
-                </ul>
-
-            </nav>
+            <HeaderNav />
 
             <div className="darkmode">
                 <button
