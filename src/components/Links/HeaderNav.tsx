@@ -29,10 +29,10 @@ export default function HeaderNav() {
                         </NavLink>
 
                     </li>
-{/* 
+
                     <li className="header-link-item">
 
-                        <NavLink className="header-link" to="/journy">
+                        <NavLink className="header-link" to="/journey">
                             Resa
                         </NavLink>
 
@@ -44,7 +44,7 @@ export default function HeaderNav() {
                             Mina Vänner
                         </NavLink>
 
-                    </li> */}
+                    </li>
 
 
                 </ul>
