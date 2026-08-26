@@ -3,7 +3,7 @@ import PageLayout from './components/layout/PageLayout'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import PortfolioPage from './pages/PortfolioPage'
-import JourneyPage from './pages/JournyPage'
+import JourneyPage from './pages/JourneyPage'
 import FriendsPage from './pages/FriendsPage'
 
 function App() {
