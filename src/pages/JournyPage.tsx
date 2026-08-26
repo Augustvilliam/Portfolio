@@ -1,6 +1,6 @@
 import Construction from "../components/Construction";
 
-export default function JournyPage() {
+export default function JourneyPage() {
     return (
         <div>
             <Construction />
