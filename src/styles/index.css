@@ -565,7 +565,7 @@ footer{
     display:flex;
     flex-direction: column;
 
-    gap:2rem;
+    gap:3rem;
 
     border-bottom: 1px solid var(--border);
     padding-bottom: 2rem;
