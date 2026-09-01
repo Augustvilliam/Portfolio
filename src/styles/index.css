@@ -564,7 +564,6 @@ footer{
     padding: .5rem 1rem;
     border-radius: var(--radius4);
 }
-.about-intro{}
 
 .about-section{
     display: flex;
@@ -584,7 +583,6 @@ footer{
     }
 }
 
-.about-section-content{}
 
 .about-section-images{
     display:flex;
@@ -1248,7 +1246,7 @@ footer{
 .journey-chapter-visual {
     position: relative;
     min-width: 0;
-    max-width: 100%;
+    max-width: 70%;
     min-height: clamp(32rem, 62svh, 45rem);
     overflow: hidden;
     border: 1px solid var(--border-strong);
@@ -1279,7 +1277,6 @@ footer{
 }
 
 .journey-chapter-item--utbildning .journey-chapter-visual img {
-    padding: 18%;
     object-fit: contain;
     background: var(--gradient-3);
 }
@@ -1293,7 +1290,7 @@ footer{
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    color: var(--primary-foreground);
+    color: var(--accent);
     font-size: var(--font-xs);
 }
 

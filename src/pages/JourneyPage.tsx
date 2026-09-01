@@ -79,7 +79,7 @@ const journeyEntries: JourneyEntry[] = [
         details: "Under utbildningen arbetade jag både individuellt och i agila team med hela kedjan från databas och API till ett gränssnitt som människor faktiskt vill använda. Restaurangåren visade sig vara en oväntat bra grund för utveckling.",
         highlights: ["Agila teamprojekt", "Fullstack-utveckling"],
         skills: ["C#", ".NET", "React", "Azure", "SQL", "Umbraco CMS" ],
-        image: "/images/studyresult.webp",
+        image: "/images/studyresult.jpg",
         imageAlt: "Abstrakta lager som representerar en teknisk lösning",
     },
     {
