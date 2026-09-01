@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {
+    ArrowDown,
     ArrowUpRight,
     BriefcaseBusiness,
     Check,
@@ -8,6 +9,7 @@ import {
     GraduationCap,
     Utensils,
 } from "lucide-react";
+import codeLayers from "../assets/hero.png";
 
 type JourneyCategory = "restaurang" | "utveckling" | "utbildning";
 type JourneyFilter = "alla" | JourneyCategory;
@@ -22,6 +24,8 @@ type JourneyEntry = {
     details: string;
     highlights: string[];
     skills: string[];
+    image: string;
+    imageAlt: string;
 };
 
 const journeyEntries: JourneyEntry[] = [
@@ -31,10 +35,12 @@ const journeyEntries: JourneyEntry[] = [
         role: "Medarbetare",
         company: "MAX Burgers",
         category: "restaurang",
-        summary: "Ett sommarjobb som blev starten på nästan tio år av service, tempo och lagarbete.",
-        details: "Här lärde jag mig att läsa av människor, prioritera när allt händer samtidigt och alltid lämna över ett bättre skift än jag tog emot.",
+        summary: "Ett sommarjobb blev starten på nästan tio år av service, tempo och lagarbete.",
+        details: "Här lärde jag mig att läsa av människor, prioritera när allt händer samtidigt och alltid lämna över ett bättre skift än jag tog emot. Service kom naturligt för mig, men det var vardagens höga tempo som byggde min arbetsmoral.",
         highlights: ["Årets Rookie", "Årets medarbetare"],
         skills: ["Kundbemötande", "Samarbete", "Problemlösning"],
+        image: "/images/burgers.png",
+        imageAlt: "Restaurangprojekt med burgare och menyer",
     },
     {
         id: 2,
@@ -43,9 +49,11 @@ const journeyEntries: JourneyEntry[] = [
         company: "MAX Burgers",
         category: "restaurang",
         summary: "Från att lösa min egen station till att få hela skiftet att fungera tillsammans.",
-        details: "Jag tog ansvar för den dagliga driften, coachade kollegor i stunden och såg till att kvaliteten höll även när kön ringlade lång.",
+        details: "Jag tog ansvar för den dagliga driften, coachade kollegor i stunden och såg till att kvaliteten höll även när kön ringlade lång. Det var här jag insåg att bra ledarskap handlar mer om tydlighet och tillit än om att ha alla svar.",
         highlights: ["Ledde skiftteam", "Ansvar för daglig drift"],
         skills: ["Ledarskap", "Prioritering", "Kvalitet"],
+        image: "/images/logo.webp",
+        imageAlt: "Porträtt av Villiam",
     },
     {
         id: 3,
@@ -53,10 +61,12 @@ const journeyEntries: JourneyEntry[] = [
         role: "Biträdande restaurangchef",
         company: "MAX Burgers",
         category: "restaurang",
-        summary: "Mer ansvar, fler perspektiv och ett starkt intresse för hur människor och system fungerar ihop.",
-        details: "Rollen gav mig erfarenhet av bemanning, uppföljning och utveckling av medarbetare — men också modet att till slut välja en helt ny riktning.",
+        summary: "Mer ansvar, fler perspektiv och ett växande intresse för hur människor och system fungerar ihop.",
+        details: "Rollen gav mig erfarenhet av bemanning, uppföljning och utveckling av medarbetare. Jag började se mönster, förbättra arbetssätt och förstå hur små beslut kan göra stor skillnad för både teamet och gästen.",
         highlights: ["Personalansvar", "Planering och uppföljning"],
         skills: ["Coaching", "Bemanning", "Verksamhetsutveckling"],
+        image: "/images/1778764267865.jpg",
+        imageAlt: "Villiam på resa",
     },
     {
         id: 4,
@@ -65,9 +75,11 @@ const journeyEntries: JourneyEntry[] = [
         company: "EC Utbildning",
         category: "utbildning",
         summary: "Jag bytte restaurangens skärmar mot Visual Studio och började bygga för webben.",
-        details: "Under utbildningen arbetade jag både individuellt och i agila team med hela kedjan från databas och API till ett gränssnitt som människor faktiskt vill använda.",
+        details: "Under utbildningen arbetade jag både individuellt och i agila team med hela kedjan från databas och API till ett gränssnitt som människor faktiskt vill använda. Restaurangåren visade sig vara en oväntat bra grund för utveckling.",
         highlights: ["Agila teamprojekt", "Fullstack-utveckling"],
         skills: ["C#", ".NET", "React", "Azure"],
+        image: codeLayers,
+        imageAlt: "Abstrakta lager som representerar en teknisk lösning",
     },
     {
         id: 5,
@@ -76,9 +88,11 @@ const journeyEntries: JourneyEntry[] = [
         company: "Nästa kapitel",
         category: "utveckling",
         summary: "Nyexaminerad, nyfiken och redo att omsätta ett decennium av arbetslivserfarenhet i kod.",
-        details: "Jag bygger egna produkter för att fördjupa mig i systemdesign, moderna React-flöden och robusta .NET-API:er — samtidigt som jag söker nästa team att växa med.",
+        details: "Jag bygger egna produkter för att fördjupa mig i systemdesign, moderna React-flöden och robusta .NET-API:er. Nu söker jag ett team där jag får bidra från dag ett, fortsätta lära mig och bygga sådant som gör verklig skillnad.",
         highlights: ["Rapportsystem", "Restaurangplattform"],
         skills: ["TypeScript", "ASP.NET", "Entity Framework", "Blazor"],
+        image: "/images/profile.webp",
+        imageAlt: "Porträtt av Villiam",
     },
 ];
 
@@ -103,7 +117,6 @@ function CategoryIcon({ category }: { category: JourneyCategory }) {
 
 export default function JourneyPage() {
     const [activeFilter, setActiveFilter] = useState<JourneyFilter>("alla");
-    const [expandedId, setExpandedId] = useState<number>(journeyEntries.at(-1)?.id ?? 1);
 
     const visibleEntries = journeyEntries.filter(
         (entry) => activeFilter === "alla" || entry.category === activeFilter,
@@ -123,7 +136,7 @@ export default function JourneyPage() {
                     </p>
                     <div className="journey-actions">
                         <a className="journey-primary-action" href="#tidslinje">
-                            Utforska tidslinjen <ChevronDown aria-hidden="true" size={18} />
+                            Börja resan <ChevronDown aria-hidden="true" size={18} />
                         </a>
                         <a className="journey-text-action" href="/cv/cv.pdf" download>
                             Ladda ner CV <ArrowUpRight aria-hidden="true" size={17} />
@@ -134,22 +147,10 @@ export default function JourneyPage() {
                 <aside className="journey-snapshot" aria-label="Arbetsliv i korthet">
                     <p className="journey-snapshot-label">Arbetsliv i korthet</p>
                     <div className="journey-stat-grid">
-                        <div>
-                            <strong>10</strong>
-                            <span>år i arbetslivet</span>
-                        </div>
-                        <div>
-                            <strong>3</strong>
-                            <span>ledarskapsår</span>
-                        </div>
-                        <div>
-                            <strong>2</strong>
-                            <span>år .NET-studier</span>
-                        </div>
-                        <div>
-                            <strong>∞</strong>
-                            <span>nyfikenhet</span>
-                        </div>
+                        <div><strong>10</strong><span>år i arbetslivet</span></div>
+                        <div><strong>3</strong><span>ledarskapsår</span></div>
+                        <div><strong>2</strong><span>år .NET-studier</span></div>
+                        <div><strong>∞</strong><span>nyfikenhet</span></div>
                     </div>
                     <p className="journey-availability">
                         <span aria-hidden="true" /> Öppen för juniora utvecklarroller
@@ -158,88 +159,89 @@ export default function JourneyPage() {
             </section>
 
             <section className="journey-story" id="tidslinje" aria-labelledby="timeline-title">
-                <div className="journey-section-heading">
-                    <div>
-                        <p className="journey-kicker">Kapitel för kapitel</p>
-                        <h2 id="timeline-title">Det här har format mig</h2>
+                <div className="journey-story-intro">
+                    <div className="journey-section-heading">
+                        <div>
+                            <p className="journey-kicker">Kapitel för kapitel</p>
+                            <h2 id="timeline-title">Det här har format mig</h2>
+                        </div>
+                        <p>Scrolla vidare genom min arbetsresa.</p>
                     </div>
-                    <p>Klicka på ett kapitel för att läsa mer.</p>
+
+                    <div className="journey-filters" aria-label="Filtrera tidslinjen">
+                        {filters.map((filter) => (
+                            <button
+                                className={activeFilter === filter.value ? "is-active" : ""}
+                                type="button"
+                                key={filter.value}
+                                onClick={() => setActiveFilter(filter.value)}
+                                aria-pressed={activeFilter === filter.value}
+                            >
+                                {filter.label}
+                            </button>
+                        ))}
+                    </div>
                 </div>
 
-                <div className="journey-filters" aria-label="Filtrera tidslinjen">
-                    {filters.map((filter) => (
-                        <button
-                            className={activeFilter === filter.value ? "is-active" : ""}
-                            type="button"
-                            key={filter.value}
-                            onClick={() => setActiveFilter(filter.value)}
-                            aria-pressed={activeFilter === filter.value}
-                        >
-                            {filter.label}
-                        </button>
-                    ))}
-                </div>
-
-                <ol className="journey-timeline">
-                    {visibleEntries.map((entry) => {
-                        const isExpanded = expandedId === entry.id;
-
-                        return (
-                            <li className={`journey-entry journey-entry--${entry.category}`} key={entry.id}>
-                                <span className="journey-marker" aria-hidden="true">
-                                    <CategoryIcon category={entry.category} />
-                                </span>
-                                <article>
-                                    <button
-                                        className="journey-entry-trigger"
-                                        type="button"
-                                        onClick={() => setExpandedId(isExpanded ? 0 : entry.id)}
-                                        aria-expanded={isExpanded}
-                                        aria-controls={`journey-details-${entry.id}`}
-                                    >
-                                        <span className="journey-entry-period">{entry.period}</span>
-                                        <span className="journey-entry-heading">
-                                            <span>
-                                                <strong>{entry.role}</strong>
-                                                <small>{entry.company}</small>
-                                            </span>
-                                            <span className="journey-category">
-                                                {categoryLabels[entry.category]}
-                                            </span>
-                                            <ChevronDown className="journey-chevron" aria-hidden="true" size={20} />
+                <ol className="journey-chapter-list">
+                    {visibleEntries.map((entry, index) => (
+                        <li className={`journey-chapter-item journey-chapter-item--${entry.category}`} key={entry.id}>
+                            <article className="journey-chapter">
+                                <div className="journey-chapter-copy">
+                                    <div className="journey-chapter-meta">
+                                        <span className="journey-chapter-number">
+                                            Kapitel {String(index + 1).padStart(2, "0")}
                                         </span>
-                                        <span className="journey-entry-summary">{entry.summary}</span>
-                                    </button>
+                                        <span className="journey-category">
+                                            <CategoryIcon category={entry.category} />
+                                            {categoryLabels[entry.category]}
+                                        </span>
+                                    </div>
 
-                                    <div
-                                        className="journey-entry-details"
-                                        id={`journey-details-${entry.id}`}
-                                        hidden={!isExpanded}
-                                    >
-                                        <p>{entry.details}</p>
-                                        <div className="journey-detail-columns">
-                                            <div>
-                                                <h3>Höjdpunkter</h3>
-                                                <ul>
-                                                    {entry.highlights.map((highlight) => (
-                                                        <li key={highlight}>
-                                                            <Check aria-hidden="true" size={15} /> {highlight}
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <h3>Jag tog med mig</h3>
-                                                <ul className="journey-skill-list">
-                                                    {entry.skills.map((skill) => <li key={skill}>{skill}</li>)}
-                                                </ul>
-                                            </div>
+                                    <p className="journey-entry-period">{entry.period}</p>
+                                    <h3>{entry.role}</h3>
+                                    <p className="journey-company">{entry.company}</p>
+                                    <p className="journey-entry-summary">{entry.summary}</p>
+                                    <p className="journey-entry-details">{entry.details}</p>
+
+                                    <div className="journey-detail-columns">
+                                        <div>
+                                            <h4>Höjdpunkter</h4>
+                                            <ul>
+                                                {entry.highlights.map((highlight) => (
+                                                    <li key={highlight}>
+                                                        <Check aria-hidden="true" size={15} /> {highlight}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4>Jag tog med mig</h4>
+                                            <ul className="journey-skill-list">
+                                                {entry.skills.map((skill) => <li key={skill}>{skill}</li>)}
+                                            </ul>
                                         </div>
                                     </div>
-                                </article>
-                            </li>
-                        );
-                    })}
+                                </div>
+
+                                <figure className="journey-chapter-visual">
+                                    <img src={entry.image} alt={entry.imageAlt} />
+                                    <figcaption>
+                                        <span>{entry.period}</span>
+                                        <span>{entry.company}</span>
+                                    </figcaption>
+                                </figure>
+                            </article>
+
+                            {index < visibleEntries.length - 1 && (
+                                <div className="journey-arrow" aria-hidden="true">
+                                    <span />
+                                    <ArrowDown size={28} strokeWidth={1.5} />
+                                    <span />
+                                </div>
+                            )}
+                        </li>
+                    ))}
                 </ol>
             </section>
 
@@ -256,7 +258,7 @@ export default function JourneyPage() {
             </section>
 
             <p className="journey-placeholder-note">
-                Visningsinnehåll: årtal, kontaktadress och vissa detaljer är tillfälliga och kan enkelt bytas ut.
+                Visningsinnehåll: årtal, bilder, kontaktadress och vissa detaljer är tillfälliga och kan enkelt bytas ut.
             </p>
         </main>
     );
