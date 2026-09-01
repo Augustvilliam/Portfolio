@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import PageLink from "../components/Links/PageLink";
 
 export default function AboutPage() {
@@ -12,12 +13,8 @@ export default function AboutPage() {
                     traditionellt CV så hittar du det här nedanför.
                 </p>
 
-                <a
-                    className="about-cv-link"
-                    href="/cv.pdf"
-                    download
-                >
-                    Ladda ner CV
+                <a className="journey-text-action" href="/cv/cv.pdf" download>
+                    Ladda ner CV <ArrowUpRight aria-hidden="true" size={17} />
                 </a>
             </header>
 

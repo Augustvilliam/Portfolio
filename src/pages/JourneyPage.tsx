@@ -10,6 +10,7 @@ import {
     Utensils,
 } from "lucide-react";
 import codeLayers from "../assets/hero.png";
+import CvButton from "../components/Links/CvButton";
 
 type JourneyCategory = "restaurang" | "utveckling" | "utbildning";
 type JourneyFilter = "alla" | JourneyCategory;
@@ -138,9 +139,7 @@ export default function JourneyPage() {
                         <a className="journey-primary-action" href="#tidslinje">
                             Börja resan <ChevronDown aria-hidden="true" size={18} />
                         </a>
-                        <a className="journey-text-action" href="/cv/cv.pdf" download>
-                            Ladda ner CV <ArrowUpRight aria-hidden="true" size={17} />
-                        </a>
+                       <CvButton />
                     </div>
                 </div>
 
