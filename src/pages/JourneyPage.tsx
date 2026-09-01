@@ -10,6 +10,7 @@ import {
     Utensils,
 } from "lucide-react";
 import codeLayers from "../assets/hero.png";
+import CvButton from "../components/Links/CvButton";
 
 type JourneyCategory = "restaurang" | "utveckling" | "utbildning";
 type JourneyFilter = "alla" | JourneyCategory;
@@ -39,7 +40,7 @@ const journeyEntries: JourneyEntry[] = [
         details: "Här lärde jag mig att läsa av människor, prioritera när allt händer samtidigt och alltid lämna över ett bättre skift än jag tog emot. Service kom naturligt för mig, men det var vardagens höga tempo som byggde min arbetsmoral.",
         highlights: ["Årets Rookie", "Årets medarbetare"],
         skills: ["Kundbemötande", "Samarbete", "Problemlösning"],
-        image: "/images/burgers.png",
+        image: "/images/employee.webp",
         imageAlt: "Restaurangprojekt med burgare och menyer",
     },
     {
@@ -52,7 +53,7 @@ const journeyEntries: JourneyEntry[] = [
         details: "Jag tog ansvar för den dagliga driften, coachade kollegor i stunden och såg till att kvaliteten höll även när kön ringlade lång. Det var här jag insåg att bra ledarskap handlar mer om tydlighet och tillit än om att ha alla svar.",
         highlights: ["Ledde skiftteam", "Ansvar för daglig drift"],
         skills: ["Ledarskap", "Prioritering", "Kvalitet"],
-        image: "/images/logo.webp",
+        image: "/images/shift.webp",
         imageAlt: "Porträtt av Villiam",
     },
     {
@@ -65,7 +66,7 @@ const journeyEntries: JourneyEntry[] = [
         details: "Rollen gav mig erfarenhet av bemanning, uppföljning och utveckling av medarbetare. Jag började se mönster, förbättra arbetssätt och förstå hur små beslut kan göra stor skillnad för både teamet och gästen.",
         highlights: ["Personalansvar", "Planering och uppföljning"],
         skills: ["Coaching", "Bemanning", "Verksamhetsutveckling"],
-        image: "/images/1778764267865.jpg",
+        image: "/images/ebba2022.webp",
         imageAlt: "Villiam på resa",
     },
     {
@@ -77,8 +78,8 @@ const journeyEntries: JourneyEntry[] = [
         summary: "Jag bytte restaurangens skärmar mot Visual Studio och började bygga för webben.",
         details: "Under utbildningen arbetade jag både individuellt och i agila team med hela kedjan från databas och API till ett gränssnitt som människor faktiskt vill använda. Restaurangåren visade sig vara en oväntat bra grund för utveckling.",
         highlights: ["Agila teamprojekt", "Fullstack-utveckling"],
-        skills: ["C#", ".NET", "React", "Azure"],
-        image: codeLayers,
+        skills: ["C#", ".NET", "React", "Azure", "SQL", "Umbraco CMS" ],
+        image: "/images/studyresult.webp",
         imageAlt: "Abstrakta lager som representerar en teknisk lösning",
     },
     {
@@ -91,7 +92,7 @@ const journeyEntries: JourneyEntry[] = [
         details: "Jag bygger egna produkter för att fördjupa mig i systemdesign, moderna React-flöden och robusta .NET-API:er. Nu söker jag ett team där jag får bidra från dag ett, fortsätta lära mig och bygga sådant som gör verklig skillnad.",
         highlights: ["Rapportsystem", "Restaurangplattform"],
         skills: ["TypeScript", "ASP.NET", "Entity Framework", "Blazor"],
-        image: "/images/profile.webp",
+        image: codeLayers,
         imageAlt: "Porträtt av Villiam",
     },
 ];
@@ -138,9 +139,7 @@ export default function JourneyPage() {
                         <a className="journey-primary-action" href="#tidslinje">
                             Börja resan <ChevronDown aria-hidden="true" size={18} />
                         </a>
-                        <a className="journey-text-action" href="/cv/cv.pdf" download>
-                            Ladda ner CV <ArrowUpRight aria-hidden="true" size={17} />
-                        </a>
+                       <CvButton />
                     </div>
                 </div>
 
