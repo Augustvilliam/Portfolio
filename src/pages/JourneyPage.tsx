@@ -39,7 +39,7 @@ const journeyEntries: JourneyEntry[] = [
         summary: "Kanske världens längst sommarjobb",
         details: "Direkt efter studenten var jag precis som många andra, det vill säga extremt trött på skolbänken, och efter ett välförtjänt sommarlov, en jobbansökan och en intervju senare började jag som medarbetare på Max Burgers i Falkenberg. Jag lärde mig snabbt att kommunikation är A och O, både när det gäller sina kollegor och gästerna. Sen vet jag inte om det var kollegorna, arbetskulturen eller själva arbetet som gjorde att jag stannade kvar mer än en sommar, men något var det ju, inte för att jag visste det då. Tyvärr blev både mitt Årets Rookie och Årets Medarebetare diplom musmat, så jag får nöja med mitt månadens medarbetare istället.",
         highlights: ["Årets Rookie", "Årets medarbetare", "Första Jobbet"],
-        skills: ["Kundbemötande", "Samarbete", "Problemlösning"],
+        skills: ["Kundbemötande", "Samarbete", "Problemlösning", "Kommunikation"],
         image: "/images/employee.webp",
         imageAlt: "Restaurangprojekt med burgare och menyer",
     },
