@@ -36,10 +36,10 @@ const journeyEntries: JourneyEntry[] = [
         role: "Medarbetare",
         company: "MAX Burgers",
         category: "restaurang",
-        summary: "Ett sommarjobb blev starten på nästan tio år av service, tempo och lagarbete.",
-        details: "Här lärde jag mig att läsa av människor, prioritera när allt händer samtidigt och alltid lämna över ett bättre skift än jag tog emot. Service kom naturligt för mig, men det var vardagens höga tempo som byggde min arbetsmoral.",
-        highlights: ["Årets Rookie", "Årets medarbetare"],
-        skills: ["Kundbemötande", "Samarbete", "Problemlösning"],
+        summary: "Kanske världens längst sommarjobb",
+        details: "Direkt efter studenten var jag precis som många andra, det vill säga extremt trött på skolbänken, och efter ett välförtjänt sommarlov, en jobbansökan och en intervju senare började jag som medarbetare på Max Burgers i Falkenberg. Jag lärde mig snabbt att kommunikation är A och O, både när det gäller sina kollegor och gästerna. Sen vet jag inte om det var kollegorna, arbetskulturen eller själva arbetet som gjorde att jag stannade kvar mer än en sommar, men något var det ju, inte för att jag visste det då. Tyvärr blev både mitt Årets Rookie och Årets Medarebetare diplom musmat, så jag får nöja med mitt månadens medarbetare istället.",
+        highlights: ["Årets Rookie", "Årets medarbetare", "Första Jobbet"],
+        skills: ["Kundbemötande", "Samarbete", "Problemlösning", "Kommunikation"],
         image: "/images/employee.webp",
         imageAlt: "Restaurangprojekt med burgare och menyer",
     },
@@ -188,9 +188,6 @@ export default function JourneyPage() {
                             <article className="journey-chapter">
                                 <div className="journey-chapter-copy">
                                     <div className="journey-chapter-meta">
-                                        <span className="journey-chapter-number">
-                                            Kapitel {String(index + 1).padStart(2, "0")}
-                                        </span>
                                         <span className="journey-category">
                                             <CategoryIcon category={entry.category} />
                                             {categoryLabels[entry.category]}
