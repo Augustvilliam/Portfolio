@@ -1,6 +1,9 @@
-import { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { A11y, Keyboard, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import {
-    ArrowLeft,
     ArrowRight,
     ArrowUpRight,
     Check,
@@ -86,54 +89,32 @@ const projects: Project[] = [
 ];
 
 function ProjectCarousel({ project }: { project: Project }) {
-    const [activeSlide, setActiveSlide] = useState(0);
-    const pointerStart = useRef<number | null>(null);
     const hasMultipleSlides = project.images.length > 1;
 
-    const showPrevious = () => {
-        setActiveSlide((current) =>
-            current === 0 ? project.images.length - 1 : current - 1,
-        );
-    };
-
-    const showNext = () => {
-        setActiveSlide((current) => (current + 1) % project.images.length);
-    };
-
     return (
-        <div
+        <Swiper
             className="portfolio-carousel"
-            role="region"
-            aria-roledescription="carousel"
-            aria-label={`Bilder från ${project.name}`}
-            tabIndex={0}
-            onKeyDown={(event) => {
-                if (!hasMultipleSlides) return;
-                if (event.key === "ArrowLeft") showPrevious();
-                if (event.key === "ArrowRight") showNext();
-            }}
-            onPointerDown={(event) => {
-                pointerStart.current = event.clientX;
-            }}
-            onPointerUp={(event) => {
-                if (!hasMultipleSlides || pointerStart.current === null) return;
-                const distance = event.clientX - pointerStart.current;
-                if (Math.abs(distance) > 45) {
-                    if (distance > 0) showPrevious();
-                    else showNext();
-                }
-                pointerStart.current = null;
+            modules={[A11y, Keyboard, Navigation, Pagination]}
+            slidesPerView={1}
+            spaceBetween={0}
+            loop={hasMultipleSlides}
+            grabCursor={hasMultipleSlides}
+            keyboard={{ enabled: true, onlyInViewport: true }}
+            navigation={hasMultipleSlides}
+            pagination={hasMultipleSlides ? { clickable: true } : false}
+            a11y={{
+                enabled: true,
+                containerRoleDescriptionMessage: "Bildkarusell",
+                containerMessage: `Bilder från ${project.name}`,
+                prevSlideMessage: "Föregående bild",
+                nextSlideMessage: "Nästa bild",
+                paginationBulletMessage: "Visa bild {{index}}",
             }}
         >
-            <div
-                className="portfolio-carousel-track"
-                style={{ transform: `translateX(-${activeSlide * 100}%)` }}
-            >
-                {project.images.map((image, index) => (
+            {project.images.map((image, index) => (
+                <SwiperSlide key={image.src}>
                     <figure
                         className="portfolio-carousel-slide"
-                        aria-hidden={index !== activeSlide}
-                        key={image.src}
                     >
                         <img src={image.src} alt={image.alt} draggable="false" />
                         <figcaption>
@@ -141,34 +122,9 @@ function ProjectCarousel({ project }: { project: Project }) {
                             <span>{index + 1} / {project.images.length}</span>
                         </figcaption>
                     </figure>
-                ))}
-            </div>
-
-            {hasMultipleSlides && (
-                <>
-                    <div className="portfolio-carousel-controls">
-                        <button type="button" onClick={showPrevious} aria-label="Föregående bild">
-                            <ArrowLeft aria-hidden="true" size={18} />
-                        </button>
-                        <button type="button" onClick={showNext} aria-label="Nästa bild">
-                            <ArrowRight aria-hidden="true" size={18} />
-                        </button>
-                    </div>
-                    <div className="portfolio-carousel-pagination" aria-label="Välj bild">
-                        {project.images.map((image, index) => (
-                            <button
-                                type="button"
-                                className={activeSlide === index ? "is-active" : ""}
-                                aria-label={`Visa bild ${index + 1}`}
-                                aria-current={activeSlide === index ? "true" : undefined}
-                                onClick={() => setActiveSlide(index)}
-                                key={image.src}
-                            />
-                        ))}
-                    </div>
-                </>
-            )}
-        </div>
+                </SwiperSlide>
+            ))}
+        </Swiper>
     );
 }
 
