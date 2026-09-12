@@ -49,8 +49,8 @@ const journeyEntries: JourneyEntry[] = [
         role: "Driftledare",
         company: "MAX Burgers",
         category: "restaurang",
-        summary: "Från att lösa min egen station till att få hela skiftet att fungera tillsammans.",
-        details: "Jag tog ansvar för den dagliga driften, coachade kollegor i stunden och såg till att kvaliteten höll även när kön ringlade lång. Det var här jag insåg att bra ledarskap handlar mer om tydlighet och tillit än om att ha alla svar.",
+        summary: "Från att lösa en station till att lösa alla station och lite till.",
+        details: "I början av vintern 2017 blev jag kallad till möte, ett möte som handlade om att bli driftledare, och med växtvärken jag hade så tackade jag självklart ja. Och då började månader som fokuserat arbete för att lära mig alla runtiner, system och processer som krävdes för att klara av mitt arbete. Jag fick runt jul gå på kurs om FIRO, som är en social relationsteori av Will Schultz. Våren 2018 var det dags för att skriva prov och visa vad jag gick för på en uppkörning. Sagt och gjort klarade jag det, men jag hade ingen aning om hur mycket arbete och uppföljning kommande månader skulle bli. Man kan lugnt säga att skillanden att teoretiskt hålla i ett pass, och faktiskt praktiskt göra det skiljer sig. Men tillslut löste det sig. Sommaren 2018 blev fin trial run, och året 2019 blev ett kanonår. Jag fick lära mig att leda, coacha och utveckla ett litet team, och jobba ständigt feedback ochr rutiner för att förbättra mitt och mina kollegors arbetssätt. Och resultatet blev utmärkelsen Årets Driftledare 2019.",
         highlights: ["Ledde skiftteam", "Ansvar för daglig drift"],
         skills: ["Ledarskap", "Prioritering", "Kvalitet"],
         image: "/images/shift.webp",
@@ -62,8 +62,8 @@ const journeyEntries: JourneyEntry[] = [
         role: "Biträdande restaurangchef",
         company: "MAX Burgers",
         category: "restaurang",
-        summary: "Mer ansvar, fler perspektiv och ett växande intresse för hur människor och system fungerar ihop.",
-        details: "Rollen gav mig erfarenhet av bemanning, uppföljning och utveckling av medarbetare. Jag började se mönster, förbättra arbetssätt och förstå hur små beslut kan göra stor skillnad för både teamet och gästen.",
+        summary: "Temp",
+        details: "Temp",
         highlights: ["Personalansvar", "Planering och uppföljning"],
         skills: ["Coaching", "Bemanning", "Verksamhetsutveckling"],
         image: "/images/ebba2022.webp",
@@ -75,8 +75,8 @@ const journeyEntries: JourneyEntry[] = [
         role: "Webbutvecklare inom .NET",
         company: "EC Utbildning",
         category: "utbildning",
-        summary: "Jag bytte restaurangens skärmar mot Visual Studio och började bygga för webben.",
-        details: "Under utbildningen arbetade jag både individuellt och i agila team med hela kedjan från databas och API till ett gränssnitt som människor faktiskt vill använda. Restaurangåren visade sig vara en oväntat bra grund för utveckling.",
+        summary: "Temp",
+        details: "Temp",
         highlights: ["Agila teamprojekt", "Fullstack-utveckling"],
         skills: ["C#", ".NET", "React", "Azure", "SQL", "Umbraco CMS" ],
         image: "/images/studyresult.jpg",
@@ -88,8 +88,8 @@ const journeyEntries: JourneyEntry[] = [
         role: "Junior fullstackutvecklare",
         company: "Nästa kapitel",
         category: "utveckling",
-        summary: "Nyexaminerad, nyfiken och redo att omsätta ett decennium av arbetslivserfarenhet i kod.",
-        details: "Jag bygger egna produkter för att fördjupa mig i systemdesign, moderna React-flöden och robusta .NET-API:er. Nu söker jag ett team där jag får bidra från dag ett, fortsätta lära mig och bygga sådant som gör verklig skillnad.",
+        summary: "Temp",
+        details: "Temp",
         highlights: ["Rapportsystem", "Restaurangplattform"],
         skills: ["TypeScript", "ASP.NET", "Entity Framework", "Blazor"],
         image: codeLayers,
@@ -248,14 +248,10 @@ export default function JourneyPage() {
                     <h2 id="journey-next-title">Ett team där jag får bygga och fortsätta växa.</h2>
                     <p>Har ni plats för en junior med senior arbetsmoral? Då vill jag gärna höra mer.</p>
                 </div>
-                <a href="mailto:hello@example.com">
+                <a href="mailto:villiam.fagrelius@gmail.com">
                     Säg hej <ArrowUpRight aria-hidden="true" size={18} />
                 </a>
             </section>
-
-            <p className="journey-placeholder-note">
-                Visningsinnehåll: årtal, bilder, kontaktadress och vissa detaljer är tillfälliga och kan enkelt bytas ut.
-            </p>
         </main>
     );
 }
