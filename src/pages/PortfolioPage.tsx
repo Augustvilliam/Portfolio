@@ -167,11 +167,9 @@ export default function PortfolioPage() {
                 </div>
 
                 <div className="portfolio-project-list">
-                    {projects.map((project, index) => (
+                    {projects.map((project) => (
                         <article className="portfolio-project" id={project.id} key={project.id}>
-                            <div className="portfolio-project-number" aria-hidden="true">
-                                {String(index + 1).padStart(2, "0")}
-                            </div>
+
 
                             <div className="portfolio-project-main">
                                 <div className="portfolio-project-heading">
