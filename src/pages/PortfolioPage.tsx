@@ -58,14 +58,19 @@ const projects: Project[] = [
         ],
         images: [
             {
+                src: "/images/demo2.png",
+                alt: "Förhandsvisning av rapportöversikten i Demophoon",
+                caption: "Rapportöversikt · nuvarande design",
+            },
+            {
                 src: "/images/Demo.png",
                 alt: "Förhandsvisning av rapporteringsflödet i Demophoon",
-                caption: "Rapporteringsflöde · pågående design",
+                caption: "Rapporteringsflöde · tidigare design",
             },
             {
                 src: "/images/demo.webp",
-                alt: "Förhandsvisning av rapportöversikten i Demophoon",
-                caption: "Rapportöversikt · pågående design",
+                alt: "Demophon",
+                caption: "Målning av Demophon av aten som ghostade sin fru",
             },
         ],
     },
