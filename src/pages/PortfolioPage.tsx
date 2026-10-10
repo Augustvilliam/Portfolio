@@ -99,6 +99,7 @@ const projects: Project[] = [
     {
         id: "grazon",
         name: "GRÅZON",
+        liveUrl: "https://salmon-meadow-073c6ce10.6.azurestaticapps.net/",
         repositoryUrl: "https://github.com/VibeARG/Greyzone",
         access: "Repository på GitHub",
         type: "Satir · Fiktiv reklambyrå",
@@ -120,6 +121,7 @@ const projects: Project[] = [
     {
         id: "radical-pi",
         name: "Radical PI",
+        liveUrl: "https://calm-water-021ca2a10.3.azurestaticapps.net/",
         repositoryUrl: "https://github.com/VibeARG/Radical-PI",
         access: "Repository på GitHub",
         type: "Fiktion · Privatdetektiv och blogg",
