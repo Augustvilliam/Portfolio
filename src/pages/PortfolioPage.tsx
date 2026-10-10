@@ -58,6 +58,11 @@ const projects: Project[] = [
         ],
         images: [
             {
+                src: "/images/Demo.png",
+                alt: "Förhandsvisning av rapporteringsflödet i Demophoon",
+                caption: "Rapporteringsflöde · pågående design",
+            },
+            {
                 src: "/images/demo.webp",
                 alt: "Förhandsvisning av rapportöversikten i Demophoon",
                 caption: "Rapportöversikt · pågående design",
