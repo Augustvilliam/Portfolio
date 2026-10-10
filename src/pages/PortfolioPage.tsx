@@ -94,6 +94,8 @@ const projects: Project[] = [
     {
         id: "grazon",
         name: "GRÅZON",
+        repositoryUrl: "https://github.com/VibeARG/Greyzone",
+        access: "Repository på GitHub",
         type: "Satir · Fiktiv reklambyrå",
         aiCategory: "AI Powered",
         lead: "En reklambyrå som skruvar upp volymen på marknadsföringen.",
@@ -101,11 +103,19 @@ const projects: Project[] = [
         focus: "Satirisk marknadsföring och en medvetet överdriven webbupplevelse",
         technologies: [],
         highlights: ["Överdriven reklamestetik och satiriska budskap", "Aggressiva popupannonser", "Telefonfunktion och telefonsvarare"],
-        images: [],
+        images: [
+            {
+                src: "/images/grazon.png",
+                alt: "GRÅZONs startsida med grå reklamestetik, färgstarka knappar och överlappande popupannonser",
+                caption: "Startsida · satirisk reklambyrå",
+            },
+        ],
     },
     {
         id: "radical-pi",
         name: "Radical PI",
+        repositoryUrl: "https://github.com/VibeARG/Radical-PI",
+        access: "Repository på GitHub",
         type: "Fiktion · Privatdetektiv och blogg",
         aiCategory: "AI Powered",
         lead: "En nutida privatdetektiv med en rejäl dos 80-tal.",
@@ -113,7 +123,13 @@ const projects: Project[] = [
         focus: "Karaktärsdrivet berättande och Miami Vice-inspirerad estetik",
         technologies: [],
         highlights: ["Fiktiv privatdetektivwebbplats med blogg", "80-talsestetik i en nutida berättelse", "En del av samma fiktiva universum som GRÅZON"],
-        images: [],
+        images: [
+            {
+                src: "/images/radical-pi.png",
+                alt: "Radical PIs startsida med neonfärger, palmer och ett porträtt av Jonny Phaser i ett Miami Vice-inspirerat tema",
+                caption: "Startsida · privatdetektiv med 80-talsestetik",
+            },
+        ],
     },
 ];
 

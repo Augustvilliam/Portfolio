@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 import { useTheme } from "../../hooks/useTheme";
-import {Sun, Moon} from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 import HeaderNav from "../Links/HeaderNav";
 
 export default function Header() {

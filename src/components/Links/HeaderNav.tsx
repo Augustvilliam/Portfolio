@@ -38,15 +38,6 @@ export default function HeaderNav() {
 
                     </li>
 
-                    <li className="header-link-item">
-
-                        <NavLink className="header-link" to="/friends">
-                            Mina Vänner
-                        </NavLink>
-
-                    </li>
-
-
                 </ul>
 
             </nav>
