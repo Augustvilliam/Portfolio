@@ -47,7 +47,7 @@ const projects: Project[] = [
         access: "Privat repository",
         lead: "En plattform som synliggör ghosting inom rekrytering.",
         description:
-            "Demophoon samlar rapporter, företag och steg i rekryteringsprocessen i ett tydligt gränssnitt. Målet är att ge arbetssökande en röst och bidra till större transparens kring hur kandidater behandlas.",
+            "Demophoon samlar rapporter, företag och steg i rekryteringsprocessen i ett tydligt gränssnitt. Målet är att ge arbetssökande en röst och bidra till större transparens kring hur kandidater behandlas. Ni kanske undrar varför det heter Demophoon? Namnet kommer ifrån en gammal grekisk historia om Demophon av aten som ghostade sin fru Phyllis. Det är en passande referens för ett projekt som handlar om ghosting.",
         role: "Koncept, design och fullstackutveckling",
         focus: "Datamodellering, rapportflöden och en trygg användarupplevelse",
         technologies: ["React", "TypeScript", "ASP.NET", "SQL Server"],
