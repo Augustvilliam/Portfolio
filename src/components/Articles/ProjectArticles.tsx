@@ -8,7 +8,7 @@ export default function ProjectArticles() {
           <header className="home-header">
             <div>
               <p className="project-eyebrow">Fullstack · Pågående projekt</p>
-              <h2>Demophoon</h2>
+              <h3>Demophoon</h3>
             </div>
 
             <span className="project-status">Under utveckling</span>
@@ -34,7 +34,7 @@ export default function ProjectArticles() {
             </ul>
 
             <PageLink
-              to="/portfolio/demophoon"
+              to="/portfolio#demophoon"
               text="Läs mer om Demophoon"
             />
           </div>
@@ -51,7 +51,7 @@ export default function ProjectArticles() {
           <header className="home-header">
             <div>
               <p className="project-eyebrow">Fullstack · Pågående projekt</p>
-              <h2>Wilhelm burgers</h2>
+              <h3>Wilhelm Burgers</h3>
             </div>
 
             <span className="project-status">Under utveckling</span>
@@ -59,7 +59,7 @@ export default function ProjectArticles() {
 
           <div className="home-featured-content">
             <p className="project-lead">
-              En renodlad Blazor applikation med microservicearkitektur.
+              En renodlad Blazor-applikation med microservicearkitektur.
             </p>
 
             <p className="project-description">
@@ -73,11 +73,11 @@ export default function ProjectArticles() {
               <li>SQL Server</li>
             </ul>
 
-            <PageLink to="/portfolio" text="Läs mer om projektet" />
+            <PageLink to="/portfolio#wilhelm-burgers" text="Läs mer om Wilhelm Burgers" />
           </div>
 
           <figure className="featured-proj-img">
-            <img src="/images/burgers.png" alt="Förhandsvisning för Wilhelm burgers projektet" />
+            <img src="/images/burgers.png" alt="Förhandsvisning av Wilhelm Burgers restaurangsystem" loading="lazy" />
           </figure>
         </article>
         </>

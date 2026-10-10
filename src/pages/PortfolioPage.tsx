@@ -3,6 +3,8 @@ import { A11y, Keyboard, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import AiTag from "../components/Articles/AiTag";
+import { aiCategories, type AiCategory } from "../data/aiCategories";
 import {
     ArrowRight,
     ArrowUpRight,
@@ -19,12 +21,13 @@ type Project = {
     id: string;
     name: string;
     type: string;
-    status: ProjectStatus;
-    release: string;
-    access: string;
+    status?: ProjectStatus;
+    release?: string;
+    access?: string;
+    aiCategory?: AiCategory;
     lead: string;
     description: string;
-    role: string;
+    role?: string;
     focus: string;
     technologies: string[];
     highlights: string[];
@@ -37,6 +40,7 @@ const projects: Project[] = [
     {
         id: "demophoon",
         name: "Demophoon",
+        aiCategory: "Pure Code",
         type: "Fullstack · Webbapplikation",
         status: "Under utveckling",
         release: "Ej publicerad",
@@ -63,6 +67,7 @@ const projects: Project[] = [
     {
         id: "wilhelm-burgers",
         name: "Wilhelm Burgers",
+        aiCategory: "AI Assisted",
         type: "Fullstack · Restaurangplattform",
         status: "Under utveckling",
         release: "Ej publicerad",
@@ -86,9 +91,36 @@ const projects: Project[] = [
             },
         ],
     },
+    {
+        id: "grazon",
+        name: "GRÅZON",
+        type: "Satir · Fiktiv reklambyrå",
+        aiCategory: "AI Powered",
+        lead: "En reklambyrå som skruvar upp volymen på marknadsföringen.",
+        description: "GRÅZON är en satirisk webbupplevelse med medvetet överdriven, skrikig och smått absurd reklamestetik. Aggressiva popupannonser, satiriska marknadsföringsbudskap och en telefonfunktion med telefonsvarare ger den fiktiva byrån sin karaktär.",
+        focus: "Satirisk marknadsföring och en medvetet överdriven webbupplevelse",
+        technologies: [],
+        highlights: ["Överdriven reklamestetik och satiriska budskap", "Aggressiva popupannonser", "Telefonfunktion och telefonsvarare"],
+        images: [],
+    },
+    {
+        id: "radical-pi",
+        name: "Radical PI",
+        type: "Fiktion · Privatdetektiv och blogg",
+        aiCategory: "AI Powered",
+        lead: "En nutida privatdetektiv med en rejäl dos 80-tal.",
+        description: 'Radical PI är en fiktiv privatdetektivwebbplats och blogg med ett Miami Vice-inspirerat 80-talstema. Berättelsen utspelar sig i modern tid och följer Jonathan "Jonny Phaser" McPhaser, en överdrivet självsäker och tämligen inkompetent privatdetektiv. I berättelsens universum är webbplatsen skapad av GRÅZON.',
+        focus: "Karaktärsdrivet berättande och Miami Vice-inspirerad estetik",
+        technologies: [],
+        highlights: ["Fiktiv privatdetektivwebbplats med blogg", "80-talsestetik i en nutida berättelse", "En del av samma fiktiva universum som GRÅZON"],
+        images: [],
+    },
 ];
 
 function ProjectCarousel({ project }: { project: Project }) {
+    if (project.images.length === 0) {
+        return <div className="portfolio-image-placeholder"><span>{project.name}</span><p>Projektbilder kommer senare.</p></div>;
+    }
     const hasMultipleSlides = project.images.length > 1;
 
     return (
@@ -137,7 +169,7 @@ export default function PortfolioPage() {
                     <h1 id="portfolio-title">Byggt för verkliga problem, inte bara för ett GitHub-flöde.</h1>
                     <p>
                         Här samlar jag projekt jag bygger, testar och lär mig av. En del är
-                        publicerade, andra pågår bakom stängda repositories — men arbetet,
+                        publicerade, andra pågår bakom stängda repositories. Arbetet,
                         besluten och lärdomarna är fortfarande värda att visa.
                     </p>
                     <a className="portfolio-primary-action" href="#projekt">
@@ -148,9 +180,9 @@ export default function PortfolioPage() {
                 <aside className="portfolio-overview" aria-label="Projekt i korthet">
                     <p>Portfolio i korthet</p>
                     <div className="portfolio-overview-grid">
-                        <div><strong>{projects.length}</strong><span>aktiva projekt</span></div>
+                        <div><strong>{projects.length}</strong><span>projekt i portfolion</span></div>
                         <div><strong>2</strong><span>fullstacklösningar</span></div>
-                        <div><strong>8</strong><span>tekniker i praktiken</span></div>
+                        <div><strong>{new Set(projects.flatMap(project => project.technologies)).size}</strong><span>tekniker i praktiken</span></div>
                         <div><strong>∞</strong><span>saker kvar att lära</span></div>
                     </div>
                     <p className="portfolio-availability"><span aria-hidden="true" /> Nya idéer byggs just nu</p>
@@ -166,6 +198,18 @@ export default function PortfolioPage() {
                     <p>Från första problemformulering till en lösning som går att använda.</p>
                 </div>
 
+                <aside className="portfolio-ai-legend" aria-labelledby="ai-legend-title">
+                    <h3 id="ai-legend-title">Så används AI i projekten</h3>
+                    <dl>
+                        {Object.entries(aiCategories).map(([category, description]) => (
+                            <div key={category}>
+                                <dt><AiTag category={category as AiCategory} /></dt>
+                                <dd>{description}</dd>
+                            </div>
+                        ))}
+                    </dl>
+                </aside>
+
                 <div className="portfolio-project-list">
                     {projects.map((project) => (
                         <article className="portfolio-project" id={project.id} key={project.id}>
@@ -177,7 +221,7 @@ export default function PortfolioPage() {
                                         <p>{project.type}</p>
                                         <h3>{project.name}</h3>
                                     </div>
-                                    <span className="portfolio-status"><span aria-hidden="true" /> {project.status}</span>
+                                    {project.status && <span className="portfolio-status"><span aria-hidden="true" /> {project.status}</span>}
                                 </div>
 
                                 <ProjectCarousel project={project} />
@@ -188,10 +232,10 @@ export default function PortfolioPage() {
                                 </div>
 
                                 <div className="portfolio-detail-grid">
-                                    <div>
+                                    {project.role && <div>
                                         <h4>Min roll</h4>
                                         <p>{project.role}</p>
-                                    </div>
+                                    </div>}
                                     <div>
                                         <h4>Fokus</h4>
                                         <p>{project.focus}</p>
@@ -209,21 +253,22 @@ export default function PortfolioPage() {
                             </div>
 
                             <aside className="portfolio-project-sidebar" aria-label={`Fakta om ${project.name}`}>
-                                <div className="portfolio-project-fact">
+                                {project.aiCategory && <div className="portfolio-ai-classification"><h4>Utvecklingsprocess</h4><AiTag category={project.aiCategory} /></div>}
+                                {project.release && <div className="portfolio-project-fact">
                                     <MonitorSmartphone aria-hidden="true" size={18} />
                                     <div><span>Publicering</span><strong>{project.release}</strong></div>
-                                </div>
-                                <div className="portfolio-project-fact">
+                                </div>}
+                                {project.access && <div className="portfolio-project-fact">
                                     <LockKeyhole aria-hidden="true" size={18} />
                                     <div><span>Källkod</span><strong>{project.access}</strong></div>
-                                </div>
+                                </div>}
 
-                                <div className="portfolio-stack">
+                                {project.technologies.length > 0 && <div className="portfolio-stack">
                                     <h4><Code2 aria-hidden="true" size={18} /> Tech stack</h4>
                                     <ul>
                                         {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
                                     </ul>
-                                </div>
+                                </div>}
 
                                 {(project.liveUrl || project.repositoryUrl) && (
                                     <div className="portfolio-project-links">
