@@ -1671,6 +1671,10 @@ footer{
     color: #fff;
     transition: background 180ms ease, transform 180ms ease;
 }
+.swiper-navigation-icon{
+    width: auto!important;
+    height: auto!important;
+}
 
 .portfolio-carousel .swiper-button-prev { right: 4.15rem; left: auto; }
 .portfolio-carousel .swiper-button-next { right: 1rem; }
@@ -1683,7 +1687,6 @@ footer{
 
 .portfolio-carousel .swiper-button-prev:hover,
 .portfolio-carousel .swiper-button-next:hover {
-    transform: translateY(-1px);
     background: var(--primary);
 }
 
