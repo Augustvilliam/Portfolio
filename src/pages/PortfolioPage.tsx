@@ -81,7 +81,8 @@ const projects: Project[] = [
     type: "Fullstack · E-handel",
     status: "Färdigställd",
     release: "Utvecklad under LIA",
-    access: "Privat repository",
+    access: "Repository på GitHub",
+    repositoryUrl: "https://github.com/EshopAssignment",
     lead: "En komplett e-handelsplattform utvecklad under min LIA hos Consid S5.",
     description:
         "Pallshoppen är en fullstack e-handelsplattform som utvecklades under min sex månader långa LIA hos Consid S5. Projektet omfattar hela kundresan från produktvisning, sökning och filtrering till varukorg, checkout, betalning och orderhantering. Plattformen innehåller även ett komplett administrationsgränssnitt för produkter, order, lager, fulfillment och uppföljning. Lösningen byggdes med fokus på tydlig arkitektur, robusta integrationsflöden och en modern användarupplevelse.",
@@ -112,28 +113,28 @@ const projects: Project[] = [
         "Bildhantering via Azure Blob Storage med flera optimerade bildstorlekar",
         "Integrationstester för centrala API- och affärsflöden"
     ],
-        images: [
-            {
-                src: "/images/pall1.png",
-                alt: "Förhandsvisning av landningsidan för Pallshoppen",
-                caption: "Landningssida",
-            },
-            {
-                src: "/images/pall2.png",
-                alt: "Förhandsvisning av produktsortimentet i Pallshoppen",
-                caption: "Produktsortiment",
-            },
-            {
-                src: "/images/pall3.png",
-                alt: "Förhandsvisning av filtrering och sökning i Pallshoppen",
-                caption: "Filtrering",
-            },
-            {
-                src: "/images/pall4.png",
-                alt: "Förhandsvisning av Admin-gränssnittet för Pallshoppen",
-                caption: "Admin-gränssnitt",
-            }
-        ],
+    images: [
+        {
+            src: "/images/pall1.png",
+            alt: "Förhandsvisning av landningsidan för Pallshoppen",
+            caption: "Landningssida",
+        },
+        {
+            src: "/images/pall2.png",
+            alt: "Förhandsvisning av produktsortimentet i Pallshoppen",
+            caption: "Produktsortiment",
+        },
+        {
+            src: "/images/pall3.png",
+            alt: "Förhandsvisning av filtrering och sökning i Pallshoppen",
+            caption: "Filtrering",
+        },
+        {
+            src: "/images/pall4.png",
+            alt: "Förhandsvisning av Admin-gränssnittet för Pallshoppen",
+            caption: "Admin-gränssnitt",
+        }
+    ],
     },
     {
         id: "wilhelm-burgers",
